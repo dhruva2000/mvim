@@ -1,3 +1,4 @@
+---@diagnostic disable: param-type-mismatch
 local M = {
   "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",
@@ -104,7 +105,7 @@ local M = {
       },
       window = {
         position = "right",
-        width = 42,
+        width = 33,
         mappings = {
           ["l"] = "open",
           ["L"] = "open",

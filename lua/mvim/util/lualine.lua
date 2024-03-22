@@ -24,8 +24,8 @@ M.components = {
       return string.sub(str, 1, 1)
     end,
     separator = {
-      right = "",
-      left = "",
+      right = '',
+      left = '',
     },
   },
 
@@ -34,7 +34,7 @@ M.components = {
     icon = { "", color = { fg = palette.pink, gui = "bold" } },
     color = { gui = "bold" },
     separator = {
-      right = "",
+      right = '',
     },
   },
 
@@ -53,6 +53,9 @@ M.components = {
     "filesize",
     icon = "󰙴",
     color = { fg = palette.lavender },
+    -- separator = {
+    --   right = ""
+    -- },
     padding = { left = 1, right = 1 },
     cond = M.conditions.buffer_not_empty and M.conditions.hide_in_width,
   },
@@ -191,22 +194,25 @@ M.components = {
       return string.format("%d/%d:%d", line, lines, col)
     end,
     icon = { "", color = { fg = palette.pink, gui = "bold" } },
-    separator = { left = "" },
-    color = { gui = "bold" },
+    separator = { left = ""}
+    -- color = { gui = "bold" },
   },
 
-  scrollbar = {
-    function()
-      local current_line = fn.line(".")
-      local total_lines = fn.line("$")
-      local chars =
-        { "██", "▇▇", "▆▆", "▅▅", "▄▄", "▃▃", "▂▂", "▁▁", "  " }
-      local line_ratio = current_line / total_lines
-      local index = math.ceil(line_ratio * #chars)
-      return chars[index]
-    end,
-    color = { fg = palette.surface0 },
-  },
+  -- scrollbar = {
+  --   function()
+  --     local current_line = fn.line(".")
+  --     local total_lines = fn.line("$")
+  --     local chars =
+  --       { "  " }
+  --     local line_ratio = current_line / total_lines
+  --     local index = math.ceil(line_ratio * #chars)
+  --     return chars[index]
+  --   end,
+  --   separator = {
+  --     right = "",
+  --     left = ""
+  --   }
+  -- },
 
   spaces = {
     function()

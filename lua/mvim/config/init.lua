@@ -59,6 +59,7 @@ local defaults = {
     |  |\    |    |  .--'    \ |  | |  |   \     /__) ,|  |_.'  |  |   |  |   
     |  | \   |    |  `---.    `'  '-'  '    \   /    (_|  |     |  |   |  |   
     `--'  `--'    `------'      `-----'      `-'       `--'     `--'   `--'   
+    @dhruvareddy
   ]],
   ---@class CtpColor
   palette = {},
@@ -87,7 +88,7 @@ function M.bootstrap()
     spec = "mvim.plugins",
     defaults = { lazy = true },
     install = { colorscheme = { "catppuccin" } },
-    change_detection = { notify = false },
+    change_detection = { notify = true },
     ui = {
       border = M.get_border(),
       icons = {

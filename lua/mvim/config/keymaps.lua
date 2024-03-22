@@ -15,6 +15,8 @@ keymap("n", "<leader>;", "%", { desc = "Jump to match item" })
 -- Motion
 keymap({ "n", "x" }, "H", "^", { desc = "To the first non-blank char of the line" })
 keymap({ "n", "x" }, "L", "$", { desc = "To the end of the line" })
+keymap({ "n" }, "<C-d>", "<C-d>zz", { noremap = true, desc = "Center while moving down" })
+keymap({ "n" }, "<C-u>", "<C-u>zz", { noremap = true, desc = "Center while moving up" })
 
 -- Move line
 keymap("n", "<M-k>", "<Cmd>move .-2<CR>==", { desc = "Move up" })

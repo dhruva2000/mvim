@@ -58,21 +58,23 @@ local M = {
           },
         },
         footer = function()
+          local info = {}
+          local fortune = require("fortune").get_fortune()
           local stats = require("lazy").stats()
           local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
-
           local version = vim.version()
-
-          return {
+          info[1] =
             string.format(
               " Neovim v%d.%d.%d%s",
               version.major,
               version.minor,
               version.patch,
               version.prerelease and "(nightly)" or ""
-            ) .. " loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
-          }
-        end,
+            ) .. " loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms"
+          
+          local footer = vim.list_extend(info, fortune)
+          return footer
+        end
       },
     }
 
