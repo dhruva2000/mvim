@@ -36,6 +36,7 @@ M.components = {
     separator = {
       right = '',
     },
+    padding = { left = 1 },
   },
 
   filetype = {
@@ -53,9 +54,6 @@ M.components = {
     "filesize",
     icon = "󰙴",
     color = { fg = palette.lavender },
-    -- separator = {
-    --   right = ""
-    -- },
     padding = { left = 1, right = 1 },
     cond = M.conditions.buffer_not_empty and M.conditions.hide_in_width,
   },
@@ -194,7 +192,7 @@ M.components = {
       return string.format("%d/%d:%d", line, lines, col)
     end,
     icon = { "", color = { fg = palette.pink, gui = "bold" } },
-    separator = { left = ""}
+    separator = { left = "", right = ""}
     -- color = { gui = "bold" },
   },
 

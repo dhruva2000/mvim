@@ -74,9 +74,6 @@ local M = {
           blue = "#70a1ff",
           green = "#7bed9f",
           yellow = "#ffeaa7",
-          base = "#000000",
-          mantle = "#000000",
-          crust = "#000000",
 
           sky = "#5ef1ff",
           pink = "#ffacfc",
