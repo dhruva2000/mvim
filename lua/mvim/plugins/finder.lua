@@ -27,6 +27,7 @@ local M = {
         end)
       end,
     },
+    "nvim-lua/plenary.nvim", -- dependency for telescope
   },
   opts = function()
     local actions = require("telescope.actions")

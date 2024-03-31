@@ -1,4 +1,4 @@
-return {
+local M = {
 	{
 		"rubiin/fortune.nvim",
 		version = "*",
@@ -12,3 +12,4 @@ return {
 	},
 
 }
+return M

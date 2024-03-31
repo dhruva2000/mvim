@@ -34,6 +34,7 @@ local M = {
       ["]"] = { name = "Next" },
       ["["] = { name = "Prev" },
       ["<leader>"] = {
+        a = {name = "󰛢 Harpoon"},
         b = { name = " Buffer" },
         c = { name = " Code" },
         d = { name = " Debug" },
