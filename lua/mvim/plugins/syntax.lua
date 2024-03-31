@@ -71,6 +71,8 @@ local M = {
     },
   },
   config = function(_, opts)
+    local ft_to_parser = require("nvim-treesitter.parsers").filetype_to_parsername
+    ft_to_parser.mdx = "markdown"
     require("nvim-treesitter.configs").setup(opts)
   end,
 }

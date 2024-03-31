@@ -1,5 +1,11 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+-- register mdx as a filetype
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx'
+  }
+})
 
 -- Enable auto format
 vim.g.autoformat = true
